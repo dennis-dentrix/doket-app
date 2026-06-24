@@ -1,0 +1,48 @@
+{
+  "expo": {
+    "name": "Doket",
+    "slug": "doket",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#FF6B35"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "app.doket.mobile",
+      "infoPlist": {
+        "NSCameraUsageDescription": "Doket uses your camera to scan receipts and documents.",
+        "NSPhotoLibraryUsageDescription": "Doket accesses photos to attach images to invoices."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#FF6B35"
+      },
+      "package": "app.doket.mobile",
+      "permissions": [
+        "CAMERA",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE",
+        "ACCESS_NETWORK_STATE",
+        "INTERNET"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-sqlite",
+      ["expo-camera", { "cameraPermission": "Doket uses the camera to scan receipts." }]
+    ],
+    "extra": {
+      "apiUrl": "http://localhost:3000/api"
+    }
+  }
+}

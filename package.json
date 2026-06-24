@@ -1,0 +1,15 @@
+{
+  "name": "doket",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev:mobile": "cd mobile && npm start",
+    "dev:api": "cd api && npm run dev",
+    "install:all": "cd mobile && npm install && cd ../api && npm install",
+    "start": "npm run dev:mobile"
+  },
+  "dependencies": {
+    "@supabase/ssr": "^0.12.0",
+    "@supabase/supabase-js": "^2.108.2"
+  }
+}
